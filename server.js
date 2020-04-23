@@ -2,7 +2,6 @@ var express = require("express");
 var bodyParser = require('body-parser');
 var path = require('path');
 var session = require('express-session');
-const mongoose = require("mongoose");
 
 var PORT = process.env.PORT || 3001;
 
