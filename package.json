@@ -9,8 +9,8 @@
     "start:dev": "concurrently \"nodemon --ignore 'client/*'\" \"npm run client\"",
     "dashboard": "cd dasboard && npm run start",
     "seed": "node scripts/seedDB.js",
-    "install": "cd dashboard && npm install",
-    "build": "cd dashboard && npm run build",
+    "dinstall": "cd dashboard && npm install",
+    "build": "cd dashboard && npm install && npm run build",
     "heroku-postbuild": "npm run build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
