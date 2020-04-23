@@ -1,0 +1,33 @@
+{
+  "name": "dashboard",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "start1": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
+    "start": "node server.js",
+    "start:dev": "concurrently \"nodemon --ignore 'client/*'\" \"npm run client\"",
+    "dashboard": "cd dasboard && npm run start",
+    "seed": "node scripts/seedDB.js",
+    "install": "cd dashboard && npm install",
+    "build": "cd dashboard && npm run build",
+    "heroku-postbuild": "npm run build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sreeveena/dashboard.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sreeveena/dashboard/issues"
+  },
+  "homepage": "https://github.com/sreeveena/dashboard#readme",
+  "dependencies": {
+    "concurrently": "^5.1.0",
+    "express": "^4.17.1",
+    "express-session": "^1.17.1",
+    "nodemon": "^2.0.3"
+  }
+}
